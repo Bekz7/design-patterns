@@ -1,0 +1,19 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.3.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'pl.bekz'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.codehaus.groovy', name: 'groovy', version: '3.0.0-alpha-4'
+    testCompile group: 'org.spockframework', name: 'spock-core', version: '1.2-groovy-2.5'
+}
