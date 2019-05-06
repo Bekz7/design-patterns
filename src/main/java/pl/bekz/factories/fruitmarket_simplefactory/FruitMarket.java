@@ -8,10 +8,11 @@ public class FruitMarket {
         this.factoryFruit = factoryFruit;
     }
 
-    Fruit orderFruit(String type){
+    Fruit orderFruit(FruitTypes type){
         Fruit fruit;
 
         fruit = factoryFruit.pickFruit(type);
+        System.out.println("---- Ordering a " + fruit.getName() + " ----");
 
         fruit.prepare();
         fruit.box();
