@@ -13,8 +13,10 @@ class BankAccountTest extends Specification {
 
     def "Should add an Observer"() {
         given: "New bank account"
+
         when: "New observer for account"
-            def owner = new AccountOwner(account)
+            new AccountOwner(account)
+
         then: "Bank account should be followed by new user"
              !account.getObservers().empty
     }
@@ -22,8 +24,10 @@ class BankAccountTest extends Specification {
     def "Should delete an observer"() {
         given: "New bank account and observer for account"
             def owner = new AccountOwner(account)
+
         when: "Observer was deleted from observe list"
             account.deleteObserver(owner)
+
         then: "List of observers should be empty"
              account.getObservers().empty
     }
@@ -33,8 +37,10 @@ class BankAccountTest extends Specification {
             def owner = new AccountOwner(account)
             def bankEmployee = new BankEmployee(account)
             account.setBalance(10000)
+
         when: "Observer was notify"
             account.notifyObservers()
+
         then: "Observers"
             owner.getBalance() == bankEmployee.getBalance()
     }
