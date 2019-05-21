@@ -12,6 +12,7 @@ public class Application {
         FruitFactory italyFactory = FactoryProvider.getFactory(FactoryTypes.ITALY_MARKET_FACTORY);
         FruitFactory spainFactory = FactoryProvider.getFactory(FactoryTypes.SPAIN_MARKET_FACTORY);
 
-        market.pickFruit(FruitTypes.BANANA, italyFactory);
+        market.orderFruit(FruitTypes.BANANA, italyFactory);
+        market.orderFruit(FruitTypes.APPLE, spainFactory);
     }
 }
