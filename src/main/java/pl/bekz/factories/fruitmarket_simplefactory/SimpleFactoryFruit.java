@@ -7,15 +7,15 @@ public class SimpleFactoryFruit {
 
         switch (type) {
             case APPLE:
-                fruit = new Apple();
+                return fruit = new Apple();
             case BANANA:
-                fruit = new Banana();
+                return fruit = new Banana();
             case GRAPES:
-                fruit = new Grapes();
+                return fruit = new Grapes();
             case ORANGE:
-                fruit = new Orange();
+                return fruit = new Orange();
             case WATERMELON:
-                fruit = new Watermelon();
+                return fruit = new Watermelon();
             default:
                 throw new NoSuchFruit("We don't have selected fruit");
         }
