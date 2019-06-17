@@ -1,6 +1,6 @@
 package pl.bekz.observer
 
-import spock.lang.Specification
+import pl.bekz.observer.spock.lang.Specification
 
 class BankAccountTest extends Specification {
 
